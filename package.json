@@ -1,0 +1,27 @@
+{
+  "name": "@rytmis/typed-react-images",
+  "version": "0.5.17-preview",
+  "scripts": {
+    "build": "echo building... && typings bundle -o out/lib/Lightbox.d.ts",
+    "lint": "echo linting... && tslint \"**/*.ts\" -e \"source/**\" -e \"source-test/**\" -e \"out/**\" -e \"node_modules/**\" -e \"typings/**\"",
+    "browser-test": "echo running browser tests... && node npm-scripts/test \"test/**/*.ts\"",
+    "source-test": "echo running source tests... &&  echo no source test",
+    "test": "echo running server tests... && echo no server test",
+    "watch": "onchange -w \"**/*.ts\" -i -e \"out/**\" -- npm -s run build+test",
+    "publish": "npm -s run lint+build+test && echo please publish to typings/registry",
+    "all-tests": "npm run browser-test",
+    "build+test": "npm run build && npm run all-tests",
+    "lint+build+test": "npm run lint && npm run build+test",
+    "prepublish": "typings install"
+  },
+  "devDependencies": {
+    "typings": "2.1.1"
+  },
+  "peerDependencies": {
+    "react": "^15.0 || ^16.0"
+  },
+  "dependencies": {
+    "react": "^16.3.2"
+  },
+  "types": "lib/Lightbox.d.ts"
+}

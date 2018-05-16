@@ -1,0 +1,6 @@
+{
+  "name": "react-images",
+  "main": "lib/index.d.ts",
+  "homepage": "http://jossmac.github.io/react-images",
+  "version": "0.5.17"
+}
